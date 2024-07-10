@@ -167,3 +167,14 @@ p{
         margin-left: 20px;
     }
 }
+@media (max-width:480px){
+    .center-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .about-small{
+        font-size: 1.7rem;
+    }
+}
