@@ -129,6 +129,9 @@ p{
     color: white;
 }
 
+/* Media Queries for Responsiveness */
+
+/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .container {
         grid-template-rows: auto auto auto auto;
@@ -154,5 +157,79 @@ p{
     #navbar a {
         padding-right: 0;
         padding-bottom: 10px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .container {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "card-1 card-1"
+        "img-card card-2"
+        "card-3 card-3";
+        height: auto;
+    }
+
+    .img-card img {
+        height: 180px;
+    }
+
+    #navbar {
+        justify-content: center;
+    }
+
+    #navbar a {
+        padding-right: 10px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "card-1 card-1"
+        "img-card card-2"
+        "card-3 card-3";
+        height: auto;
+    }
+
+    .img-card img {
+        height: 200px;
+    }
+
+    #navbar {
+        justify-content: flex-end;
+    }
+
+    #navbar a {
+        padding-right: 15px;
+    }
+}
+
+/* Large devices (laptops/desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+    .container {
+        grid-template-rows: 0.5fr 2fr 1.5fr;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+        "card-1 card-1"
+        "card-2 img-card"
+        "card-3 card-3";
+    }
+
+    .img-card img {
+        height: 200px;
+    }
+
+    #navbar {
+        justify-content: flex-end;
+    }
+
+    #navbar a {
+        padding-right: 20px;
     }
 }
