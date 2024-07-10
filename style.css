@@ -129,107 +129,62 @@ p{
     color: white;
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries */
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Styles for Low-End Smartphones (320px - 480px width, 480px - 800px height) */
+@media only screen and (max-width: 480px) {
     .container {
-        grid-template-rows: auto auto auto auto;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "card-1"
-        "img-card"
-        "card-2"
-        "card-3";
-        height: auto;
+        grid-template-columns: 1fr; /* Adjust grid layout for smaller screens */
+        grid-template-rows: auto; /* Reset grid rows for smaller screens */
+        height: auto; /* Adjust height as necessary */
     }
-
+    .card-1, .card-2, .card-3, .img-card {
+        border-radius: 0; /* Remove border-radius for cards on smaller screens */
+    }
     .img-card img {
-        height: 150px;
+        height: 150px; /* Adjust profile image size for smaller screens */
     }
-
     #navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-    }
-
-    #navbar a {
-        padding-right: 0;
-        padding-bottom: 10px;
+        height: 60px; /* Adjust navbar height for smaller screens */
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+/* Styles for Mid-Range Smartphones (720px width, 1280px height) */
+@media only screen and (min-width: 481px) and (max-width: 720px) and (min-height: 801px) and (max-height: 1280px) {
     .container {
-        grid-template-rows: auto auto auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-        "card-1 card-1"
-        "img-card card-2"
-        "card-3 card-3";
-        height: auto;
+        grid-template-rows: 0.5fr 1.5fr 1.5fr; /* Adjust grid rows for mid-range smartphones */
     }
-
     .img-card img {
-        height: 180px;
-    }
-
-    #navbar {
-        justify-content: center;
-    }
-
-    #navbar a {
-        padding-right: 10px;
+        height: 180px; /* Adjust profile image size for mid-range smartphones */
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+/* Styles for High-End Smartphones (1080px width, 1920px height) */
+@media only screen and (min-width: 721px) and (max-width: 1080px) and (min-height: 1281px) and (max-height: 1920px) {
     .container {
-        grid-template-rows: auto auto auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-        "card-1 card-1"
-        "img-card card-2"
-        "card-3 card-3";
-        height: auto;
+        grid-template-rows: 0.5fr 1.8fr 1.2fr; /* Adjust grid rows for high-end smartphones */
     }
-
     .img-card img {
-        height: 200px;
-    }
-
-    #navbar {
-        justify-content: flex-end;
-    }
-
-    #navbar a {
-        padding-right: 15px;
+        height: 220px; /* Adjust profile image size for high-end smartphones */
     }
 }
 
-/* Large devices (laptops/desktops, 1024px and up) */
-@media only screen and (min-width: 1024px) {
+/* Styles for Flagship Smartphones (1440px width, 2560px height) */
+@media only screen and (min-width: 1081px) and (max-width: 1440px) and (min-height: 1921px) and (max-height: 2560px) {
     .container {
-        grid-template-rows: 0.5fr 2fr 1.5fr;
-        grid-template-columns: 2fr 1fr;
-        grid-template-areas:
-        "card-1 card-1"
-        "card-2 img-card"
-        "card-3 card-3";
+        grid-template-rows: 0.3fr 1.8fr 1.5fr; /* Adjust grid rows for flagship smartphones */
     }
-
     .img-card img {
-        height: 200px;
+        height: 250px; /* Adjust profile image size for flagship smartphones */
     }
+}
 
-    #navbar {
-        justify-content: flex-end;
+/* Styles for Latest High-End Models (1440px - 1600px width, 3200px height) */
+@media only screen and (min-width: 1441px) and (max-width: 1600px) and (min-height: 2561px) and (max-height: 3200px) {
+    .container {
+        grid-template-rows: 0.3fr 2fr 1.7fr; /* Adjust grid rows for latest high-end models */
     }
-
-    #navbar a {
-        padding-right: 20px;
+    .img-card img {
+        height: 280px; /* Adjust profile image size for latest high-end models */
     }
 }
