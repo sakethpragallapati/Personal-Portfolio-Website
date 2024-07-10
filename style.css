@@ -147,6 +147,12 @@ p{
     #navbar {
         height: 60px; /* Adjust navbar height for smaller screens */
     }
+    
+    /* Change skill cards to block mode */
+    .one, .two, .three {
+        display: block;
+        width: 100%;
+    }
 }
 
 /* Styles for Mid-Range Smartphones (720px width, 1280px height) */
